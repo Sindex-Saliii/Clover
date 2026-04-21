@@ -16,6 +16,30 @@
 -----------//// Wait Until Game Load ////-----------
 
 repeat task.wait() until game:IsLoaded()
+local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sindex-Saliii/Clover/refs/heads/main/API/Optimizer.luau"))()
+-----------//// Improve FPS ////-----------
+
+getgenv().optimizefps = optimize_fps or false
+getgenv().whitescreen = white_screen or false
+getgenv().blackscreen = black_screen or false
+getgenv().boostfpspromax = boostfps_promax or false
+if getgenv().optimizefps then
+   API.FPSIMPROVE()
+end
+if getgenv().white_screen then
+    print("[ Clover ] - Rendering: White Screen")
+    API.WhiteScreen()
+end
+if getgenv().black_screen then
+    print("[ Clover ] - Rendering: Black Screen")
+    API.BlackScreen()
+end
+if getgenv().clearmemory then
+   API.CLEARMEMORY()
+end
+if getgenv().boostfpspromax then
+   API.AggressiveMode()
+end
 
 -----------//// Supported Game Data ////-----------
 
@@ -159,8 +183,8 @@ cloverCheck("REQUIRE", pcall(function() return require(game:GetService("CoreGui"
 
 ----------//// Auto Rejoin ////-----------
 
-if getgenv().autorejoin == nil then getgenv().autorejoin = true end
 
+getgenv().autorejoin = auto_rejoin or false
 if getgenv().autorejoin then
     local TeleportService = game:GetService("TeleportService")
     local CoreGui = game:GetService("CoreGui")
