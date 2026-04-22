@@ -17,6 +17,8 @@
 
 repeat task.wait() until game:IsLoaded()
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sindex-Saliii/Clover/refs/heads/main/API/Optimizer.luau"))()
+-----------//// Configs ////-----------
+getgenv().CloverConfigs = CloverConfigs or nil
 -----------//// Improve FPS ////-----------
 
 getgenv().optimizefps = optimize_fps or false
