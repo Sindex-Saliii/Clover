@@ -209,7 +209,7 @@ end
 Status.Text = "Fetching Script..."
 TweenService:Create(BarFill, TweenInfo.new(0.5), {Size = UDim2.new(0.8, 0, 1, 0)}):Play()
 
-local scriptUrl = string.format("https://raw.githubusercontent.com/Sindex-Saliii/Clover/refs/heads/main/scripts/%d.luau", game.PlaceId)
+local scriptUrl = string.format("https://raw.githubusercontent.com/Sindex-Saliii/Clover/refs/heads/main/scripts/%d.lua", game.PlaceId)
 local success, content = pcall(game.HttpGet, game, scriptUrl)
 
 if success and content and content ~= "404: Not Found" then
