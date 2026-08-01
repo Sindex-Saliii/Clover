@@ -13,7 +13,7 @@
  Copyright © 2026 Clover Development. All Rights Reserved.
 ]]--
 
------------//// Wait Until Game Load ////-----------
+-----------//// Wait Until Game Load ////----------
 
 repeat task.wait() until game:IsLoaded()
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sindex-Saliii/Clover/refs/heads/main/API/Optimizer.luau"))()
